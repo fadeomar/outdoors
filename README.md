@@ -28,4 +28,7 @@ applying advance  CSS
   the second one is to use the fram, start with write a keyframes and give it a name then , you can specify what I want to happen in each moment of the animation start with 0% which is before the animation actually starts and the finish will be 100% ,
   and to apply it , it need two properties to specify which the animation name and the animation duration 
 
-  thire is a lettle shake after the animation finished so to soleve this problem we need to add backface-visibility proprety to hidden in the parent element 
+  thire is a lettle shake after the animation finished so to solve this problem we need to add backface-visibility proprety to hidden in the parent element 
+
+   pseudo class it's used to  style the element under a special condition 
+   ex: .btn:link .btn:visited 
