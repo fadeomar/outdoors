@@ -34,11 +34,11 @@ body {
 
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 30px;
+  left: 30px;
 }
 
 .logo {
-
+  height: 80px;
 }
 

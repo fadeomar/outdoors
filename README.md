@@ -17,3 +17,7 @@ applying advance  CSS
   adding padding in the body tag style will make a border for all the page .
 
   The clip-path CSS property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.
+
+  if we wnat to make any box absolute to move it we need to make the parent posititon relative 
+  
+  when resizing the image just change the height and then the width will be automatically edited 
