@@ -12,4 +12,20 @@ dark green: #28b485
 
 body {
   font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      #7ed56fb4,
+      #28b485c0),
+    url('../img/background.jpg');
+  background-size: cover;
+  background-position: bottom;
 }
