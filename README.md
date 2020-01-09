@@ -15,3 +15,5 @@ applying advance  CSS
   adding layer in the background using background-image with two proprtyes first one is liner-gradient which tack three parameters the position and the first color and the second color, and the next one is url to select the background image location
 
   adding padding in the body tag style will make a border for all the page .
+
+  The clip-path CSS property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.
