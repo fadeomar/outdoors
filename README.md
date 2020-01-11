@@ -34,9 +34,18 @@ applying advance  CSS
    ex: .btn:link .btn:visited 
 
 ## Three Pillars of Writing Good HTML and CSS (Never Forget Them!)
-  1- Responsive Design
+  1- Responsive Design :
     - Fluid layouts.
     - Media queries
     - Responsive images
     - Correct units
     - Desktop-first vs mobile-first
+
+  2- Maintainable and scalable code :
+    - Clean
+    - Easy-to-understand
+    - Growth
+    - Reudsble 
+    - How to organize files
+    - How to name classes
+    - How to structure HTML
