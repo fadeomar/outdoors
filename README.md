@@ -79,3 +79,35 @@ we have many parts here :
   4- ```color``` : property.
 
   5- ```blue``` : Declaration.
+
+## Cascade(the C in CSS) : 
+  Process of combining different stylesheets and resolving confilcts between different CSS rules and declarations, when more than one rule applies to a certain element. 
+
+  ### CSS come from different sources : 
+    1-  author declarations (developer styles)
+    2- user declarations (like if the user change the font size in the browser )
+    3- defult browser declarations
+
+  now the the cascade resolve conflicts by by look to the importance at the selector specificty and to source order 
+
+  so 
+  Importance  >> Specificity  >> Source order .  
+  * Importance:(by order)                     
+    1- User ```!important``` declarations.                     
+    2- Author ```!important``` declaration.  
+    3- Author declaration.    
+    4- User declaration.  
+    5- Defult browser declaration.  
+
+(now alot of time we have a bunch of conflicting rules in author stylesheets without any important keyword this is actually the most common scenario in this case all declaration has the same importance thwn the cascade calculate and compare the specificities of the decloration selectors)
+  * Specificity : (by order )   
+    1- inline styles .  
+    2- IDs.  
+    3- Classes, pseudo-classes attribute.   
+    4- Elements, pseudo-elemensts.  
+  
+  (the specificty is not just one number but one number for each of the four categories on evry selector (inline, IDs, Classes, Elements) Its works by looking to the order and how many appearances, and the the value of the winner called cascaded value ) 
+
+  * Surce order : 
+    if we have two elements have the exact same specifity , so in this case the last CSS declaration written in the code is the one that will apply
+  
