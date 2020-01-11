@@ -181,3 +181,83 @@ so ,
   - Other elements in the render tree.  
 
 let start with the **Box Modle** : 
+the box modle is without a doubt one of the most fundamental parts of CSS .
+According to the box modle, each and every element on a webpage can be seen as a rectangle box and each box can have a width , a height , a padding , margins and borders 
+![boxModle](img/csss-box-model.png)
+
+**so lets break it down**
+  - Content: text, img, etc.
+  - padding : transoarent area around the content, inside of the box;   
+  - Border : goes around the padding and the conent;   
+  - Margen: space between the boxes;   
+  - Fill area :area that gets filled with background color or background image;  
+
+so if we want to claculate total width of the defult box modle it would be : 
+**total width** = right border + right padding + specified width + left border + left padding;   
+it's bunch of calculates and to solve this problem put the value of the box-sizing by border box 
+so that the height and the width will be defined for the entire box including the padding and the border with the content area;
+so now **total width** = specified width;   
+
+
+**Box types** : 
+  - Block level Box:
+    * Elements formatted visually as block.
+    * 100% of parent width.
+    * Vertically , one after another 
+    * Box-modle applies as shown 
+    * 
+    ```
+    display : block
+    display : flex
+    display : list-item
+    display : table
+    ``` 
+  
+  - Inline box:
+    * Content is distributed in lines.
+    * Occupies only content's space
+    * no line-breaks
+    * no heights and widths
+    * padding and margins only horizontal (left and right)
+    * 
+    ```
+    display: inline
+    ```
+   
+  - Inline block box: 
+    * A mix of block and inline 
+    * occupies only content's space 
+    * No line-bracks
+    * Box-modle applies as showed 
+    * 
+    ```
+    display : inline-block
+    ```
+
+**Positioning Schames**
+  - Normal flow 
+    * Default positioning scheme;
+    * NOT floates;
+    * NOT absolutely positioned 
+    * Elements laid out according to their source order ;
+    ```
+    default
+    position : relative 
+    ```
+
+  - Floats
+    * Element is removed form the normal flow ;
+    * Text and inline elements will wrap around the floated element ;
+    * The container will not adjust its height to the element;
+    ```
+    float: left 
+    float: right
+    ```
+
+  - Absolute positioning 
+    * Element is removed form the normal flow ;
+    * No impact on surrounding content or elements;
+    * We use ```top, bottom, left``` and ```right``` to offset the element from its relatively positioned container 
+
+
+    
