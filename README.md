@@ -32,3 +32,11 @@ applying advance  CSS
 
    pseudo class it's used to  style the element under a special condition 
    ex: .btn:link .btn:visited 
+
+## Three Pillars of Writing Good HTML and CSS (Never Forget Them!)
+  1- Responsive Design
+    - Fluid layouts.
+    - Media queries
+    - Responsive images
+    - Correct units
+    - Desktop-first vs mobile-first
