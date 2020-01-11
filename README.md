@@ -169,3 +169,15 @@ so ,
   - Inheritance of a property only works if no one declares a value for that property;  
   - The inherit Keyword forces inheritance on a certain property   
   - The initial keyword resets a property to initial value ;
+
+
+
+## How visual formating modle work? :
+**the visual formating modle** : Algorthm that calculates boxes and determine the layout of theses boxes, for each element in the render tree, in order to detrmine the final layout of the page . it depend on 
+  - Dimentions of boxes : the box modle .
+  - Box type: inline , block , inline-block .  
+  - Positioning scheme : floats and positioning .  
+  - stacking contexts .  
+  - Other elements in the render tree.  
+
+let start with the **Box Modle** : 
