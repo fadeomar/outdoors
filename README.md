@@ -110,4 +110,12 @@ we have many parts here :
 
   * Surce order : 
     if we have two elements have the exact same specifity , so in this case the last CSS declaration written in the code is the one that will apply
-  
+
+## Process Valuses in CSS : 
+the declared values are process in six different steps starting form declared value to the final actual value , so : 
+  1- Declared values : author declaration .  
+  2- Cascaded values : after cascading .   
+  3- Specified values: defulting if there is no cascaded value .  
+  4- Computed value : converting relative values to absolute (cnvarted all words or units to relative values)  
+  5- Used values : final calculations, based on layout (like the persantage valuse converted to px)  
+  6- Actual value : browser and device restrictions
