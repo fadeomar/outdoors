@@ -155,3 +155,17 @@ so fainally notes :
 - rem are always measured relative to the document's root font-size;   
 - vh and vw are simply percentage measurements of the viewport's height and width.
 
+
+### Inheritance in CSS :
+evry CSS property must have a value , 
+so , is there a cascaded vluse ? if yes then specified value equal the cascaded value 
+But if not then will look is the property inherited ? if yes then the specified value will equal the cascaded value of the parent element
+ex: the parent has proprtey of line-height : 150% , and the child does not , and the line-height for parent equal 20px , then for the child will be 20px the calculated value .
+
+so , 
+  - Inheritance passes the values for some specific properties from parents to children (more maintainable code)  
+  - Properties related to text are inherited : font-size, font-family, color, etc;   
+  - The computed value of a property is what gets inherited, not the declared value;  
+  - Inheritance of a property only works if no one declares a value for that property;  
+  - The inherit Keyword forces inheritance on a certain property   
+  - The initial keyword resets a property to initial value ;
