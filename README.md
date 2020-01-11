@@ -57,3 +57,7 @@ applying advance  CSS
     - Use a CSS preprocessor
     - Less images 
     - Compress images 
+
+## CSSOM(CSS Object Model) :
+when it's start to parse html file and find the css sheets includes in the html head and start loading them, and start to parse the css, but parsing css is bit more complex, there tow main steps first off, conflicting CSS declarations are resolved (cascade), and the second is to process final CSS values , and after all of this is done , the final CSS is also stored in a tree like structure called CSSOM, now DOM and CSSOM together form the Render Tree and it ready to render the page and to do that the browser used the Visual Formatting Model algorithm uses a bunch of stuff like the box modile, floats, and positioning , and finally after Visual Formating Modle has done it's work , the website it's finally renderd or painted to the screen 
+![CSSOM](img/CSSOM.png)
