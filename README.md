@@ -32,3 +32,232 @@ applying advance  CSS
 
    pseudo class it's used to  style the element under a special condition 
    ex: .btn:link .btn:visited 
+
+## Three Pillars of Writing Good HTML and CSS (Never Forget Them!)
+  1- Responsive Design :
+    - Fluid layouts.
+    - Media queries
+    - Responsive images
+    - Correct units
+    - Desktop-first vs mobile-first
+
+  2- Maintainable and scalable code :
+    - Clean
+    - Easy-to-understand
+    - Growth
+    - Reudsble 
+    - How to organize files
+    - How to name classes
+    - How to structure HTML
+
+  3- Web performance :
+    - Less HTTP requests
+    - Less code
+    - Compress code 
+    - Use a CSS preprocessor
+    - Less images 
+    - Compress images 
+
+## CSSOM(CSS Object Model) :
+  when it's start to parse html file and find the css sheets includes in the html head and start loading them, and start to parse the css, but parsing css is bit more complex, there tow main steps first off, conflicting CSS declarations are resolved (cascade), and the second is to process final CSS values , and after all of this is done , the final CSS is also stored in a tree like structure called CSSOM, now DOM and CSSOM together form the Render Tree and it ready to render the page and to do that the browser used the Visual Formatting Model algorithm uses a bunch of stuff like the box modile, floats, and positioning , and finally after Visual Formating Modle has done it's work , the website it's finally renderd or painted to the screen 
+![CSSOM](img/CSSOM.png)
+
+## CSS rule : 
+```
+.my-class {
+  color : blue;
+}
+```
+we have many parts here : 
+
+  1- .my-class : Selector.
+
+  2- {...} : Declaration block.
+
+  3- ```color: blue;```  :  Declaration.
+
+  4- ```color``` : property.
+
+  5- ```blue``` : Declaration.
+
+## Cascade(the C in CSS) : 
+  Process of combining different stylesheets and resolving confilcts between different CSS rules and declarations, when more than one rule applies to a certain element. 
+
+  ### CSS come from different sources : 
+    1-  author declarations (developer styles)
+    2- user declarations (like if the user change the font size in the browser )
+    3- defult browser declarations
+
+  now the the cascade resolve conflicts by by look to the importance at the selector specificty and to source order 
+
+  so 
+  Importance  >> Specificity  >> Source order .  
+  * Importance:(by order)                     
+    1- User ```!important``` declarations.                     
+    2- Author ```!important``` declaration.  
+    3- Author declaration.    
+    4- User declaration.  
+    5- Defult browser declaration.  
+
+(now alot of time we have a bunch of conflicting rules in author stylesheets without any important keyword this is actually the most common scenario in this case all declaration has the same importance thwn the cascade calculate and compare the specificities of the decloration selectors)
+  * Specificity : (by order )   
+    1- inline styles .  
+    2- IDs.  
+    3- Classes, pseudo-classes attribute.   
+    4- Elements, pseudo-elemensts.  
+  
+  (the specificty is not just one number but one number for each of the four categories on evry selector (inline, IDs, Classes, Elements) Its works by looking to the order and how many appearances, and the the value of the winner called cascaded value ) 
+
+  * Surce order : 
+    if we have two elements have the exact same specifity , so in this case the last CSS declaration written in the code is the one that will apply
+
+## Process Valuses in CSS : 
+the declared values are process in six different steps starting form declared value to the final actual value , so : 
+  1- Declared values : author declaration .  
+  2- Cascaded values : after cascading .   
+  3- Specified values: defulting if there is no cascaded value .  
+  4- Computed value : converting relative values to absolute (cnvarted all words or units to relative values)  
+  5- Used values : final calculations, based on layout (like the persantage valuse converted to px)  
+  6- Actual value : browser and device restrictions.   
+
+### how the CSS engine converts relative units to pixels : 
+in order to calculate computed and used values 
+  - first : for percentages :- 
+    * ```for fonts : 150%``` : means that the element will have a font-size 150% larger than its parent element and it maybe the html or the body element .  
+    * for lengths (height, padding, margin or something else) the reference is always the parent element's width .   
+    ```padding : 10%``` : 0.10 * parent width px.   
+  - second : for em : - 
+  (both em and rem are fonts based )
+    * for fonts 
+    ```font-size: 3em;``` : the reference is simply the parent's computed font-size. 3em means three times the parent font size if the parent font-size is 24 px that means 3em equal 72px.  
+    * for lengths (the em uses the font size of the current element as a reference)
+    ```padding:2em``` : if the font-size for the element was 24px, the 2em will equal 48px.
+
+  - third: for rem :-
+  It actually works same way for both font sizes and lengths because it always just uses the root font size as a reference  
+  ```padding : 10 rem``` : if the root font size was 16px, 10 rem will equal 160px .
+
+#### why shuold we actually size things with em and rem if they based on font size ? 
+by doing so we can build more requset responsive layouts, because just by changing the font sizes, we will automatically change length since it depend on a font size and that gives us a lot of flexibilty 
+
+  - forth: vh and vw :- 
+  these two are based on browser's view port 
+  1 vw its just one percent of the view port width.   
+
+so fainally notes : 
+- Each property has an initial value, used if nothing is declared (and if there is no inheritance)  
+- Browsers specify a root font size for each page (usually 16px)   
+- Percentages and relative values are always converted to pixels.  
+- Percentages are measured relative to their parent's font-size, if used to specify font-size;
+- percentages are measured relative to their parent's width, if used to specify lengths ;   
+- em are measured relative to their parent font-size, if used to specify font-size;   
+- em are measured relative to the current font-size, if used to specify lengths;   
+- rem are always measured relative to the document's root font-size;   
+- vh and vw are simply percentage measurements of the viewport's height and width.
+
+
+### Inheritance in CSS :
+evry CSS property must have a value , 
+so , is there a cascaded vluse ? if yes then specified value equal the cascaded value 
+But if not then will look is the property inherited ? if yes then the specified value will equal the cascaded value of the parent element
+ex: the parent has proprtey of line-height : 150% , and the child does not , and the line-height for parent equal 20px , then for the child will be 20px the calculated value .
+
+so , 
+  - Inheritance passes the values for some specific properties from parents to children (more maintainable code)  
+  - Properties related to text are inherited : font-size, font-family, color, etc;   
+  - The computed value of a property is what gets inherited, not the declared value;  
+  - Inheritance of a property only works if no one declares a value for that property;  
+  - The inherit Keyword forces inheritance on a certain property   
+  - The initial keyword resets a property to initial value ;
+
+
+
+## How visual formating modle work? :
+**the visual formating modle** : Algorthm that calculates boxes and determine the layout of theses boxes, for each element in the render tree, in order to detrmine the final layout of the page . it depend on 
+  - Dimentions of boxes : the box modle .
+  - Box type: inline , block , inline-block .  
+  - Positioning scheme : floats and positioning .  
+  - stacking contexts .  
+  - Other elements in the render tree.  
+
+let start with the **Box Modle** : 
+the box modle is without a doubt one of the most fundamental parts of CSS .
+According to the box modle, each and every element on a webpage can be seen as a rectangle box and each box can have a width , a height , a padding , margins and borders 
+![boxModle](img/csss-box-model.png)
+
+**so lets break it down**
+  - Content: text, img, etc.
+  - padding : transoarent area around the content, inside of the box;   
+  - Border : goes around the padding and the conent;   
+  - Margen: space between the boxes;   
+  - Fill area :area that gets filled with background color or background image;  
+
+so if we want to claculate total width of the defult box modle it would be : 
+**total width** = right border + right padding + specified width + left border + left padding;   
+it's bunch of calculates and to solve this problem put the value of the box-sizing by border box 
+so that the height and the width will be defined for the entire box including the padding and the border with the content area;
+so now **total width** = specified width;   
+
+
+**Box types** : 
+  - Block level Box:
+    * Elements formatted visually as block.
+    * 100% of parent width.
+    * Vertically , one after another 
+    * Box-modle applies as shown 
+    * 
+    ```
+    display : block
+    display : flex
+    display : list-item
+    display : table
+    ``` 
+  
+  - Inline box:
+    * Content is distributed in lines.
+    * Occupies only content's space
+    * no line-breaks
+    * no heights and widths
+    * padding and margins only horizontal (left and right)
+    * 
+    ```
+    display: inline
+    ```
+   
+  - Inline block box: 
+    * A mix of block and inline 
+    * occupies only content's space 
+    * No line-bracks
+    * Box-modle applies as showed 
+    * 
+    ```
+    display : inline-block
+    ```
+
+**Positioning Schames**
+  - Normal flow 
+    * Default positioning scheme;
+    * NOT floates;
+    * NOT absolutely positioned 
+    * Elements laid out according to their source order ;
+    ```
+    default
+    position : relative 
+    ```
+
+  - Floats
+    * Element is removed form the normal flow ;
+    * Text and inline elements will wrap around the floated element ;
+    * The container will not adjust its height to the element;
+    ```
+    float: left 
+    float: right
+    ```
+
+  - Absolute positioning 
+    * Element is removed form the normal flow ;
+    * No impact on surrounding content or elements;
+    * We use ```top, bottom, left``` and ```right``` to offset the element from its relatively positioned container 
+
+
+    
