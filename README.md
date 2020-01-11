@@ -118,4 +118,40 @@ the declared values are process in six different steps starting form declared va
   3- Specified values: defulting if there is no cascaded value .  
   4- Computed value : converting relative values to absolute (cnvarted all words or units to relative values)  
   5- Used values : final calculations, based on layout (like the persantage valuse converted to px)  
-  6- Actual value : browser and device restrictions
+  6- Actual value : browser and device restrictions.   
+
+### how the CSS engine converts relative units to pixels : 
+in order to calculate computed and used values 
+  - first : for percentages :- 
+    * ```for fonts : 150%``` : means that the element will have a font-size 150% larger than its parent element and it maybe the html or the body element .  
+    * for lengths (height, padding, margin or something else) the reference is always the parent element's width .   
+    ```padding : 10%``` : 0.10 * parent width px.   
+  - second : for em : - 
+  (both em and rem are fonts based )
+    * for fonts 
+    ```font-size: 3em;``` : the reference is simply the parent's computed font-size. 3em means three times the parent font size if the parent font-size is 24 px that means 3em equal 72px.  
+    * for lengths (the em uses the font size of the current element as a reference)
+    ```padding:2em``` : if the font-size for the element was 24px, the 2em will equal 48px.
+
+  - third: for rem :-
+  It actually works same way for both font sizes and lengths because it always just uses the root font size as a reference  
+  ```padding : 10 rem``` : if the root font size was 16px, 10 rem will equal 160px .
+
+#### why shuold we actually size things with em and rem if they based on font size ? 
+by doing so we can build more requset responsive layouts, because just by changing the font sizes, we will automatically change length since it depend on a font size and that gives us a lot of flexibilty 
+
+  - forth: vh and vw :- 
+  these two are based on browser's view port 
+  1 vw its just one percent of the view port width.   
+
+so fainally notes : 
+- Each property has an initial value, used if nothing is declared (and if there is no inheritance)  
+- Browsers specify a root font size for each page (usually 16px)   
+- Percentages and relative values are always converted to pixels.  
+- Percentages are measured relative to their parent's font-size, if used to specify font-size;
+- percentages are measured relative to their parent's width, if used to specify lengths ;   
+- em are measured relative to their parent font-size, if used to specify font-size;   
+- em are measured relative to the current font-size, if used to specify lengths;   
+- rem are always measured relative to the document's root font-size;   
+- vh and vw are simply percentage measurements of the viewport's height and width.
+
