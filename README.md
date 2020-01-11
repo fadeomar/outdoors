@@ -49,3 +49,11 @@ applying advance  CSS
     - How to organize files
     - How to name classes
     - How to structure HTML
+
+  3- Web performance :
+    - Less HTTP requests
+    - Less code
+    - Compress code 
+    - Use a CSS preprocessor
+    - Less images 
+    - Compress images 
