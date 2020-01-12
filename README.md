@@ -259,5 +259,18 @@ so now **total width** = specified width;
     * No impact on surrounding content or elements;
     * We use ```top, bottom, left``` and ```right``` to offset the element from its relatively positioned container 
 
+----
+### introduction to Sass :- 
 
-    
+**Sass** : is a CSS preprocessor, an extension of CSS that adds power and elegance to the basic language 
+we use sass to fix the problems that we have with CSS, CSS gets very messy, For each project ,having a single css file with thousands of lines of code without any reusable pieces , without any logic , gets completely unmanageable after some time .
+
+**some fetures that Sass gives us**
+  - Variables: for reusable values such as colors, font-size, spacing ,etc.
+  - Nesting : to nest selectors inside of one another,allowing us to write less code .
+  - operators : for mathematical operations right inside of CSS.
+  - Partials and imports: to write in different files and importing them all into one single file ;
+  - Mixins : to write reusable pieces of CSS code ;
+  - Functions : similar to mixins, with the different that they produce a value that can be used;
+  - Extends : to make different selctors inherit declarations that are common to all of them ;
+  - Control directives : for writing complex code using conditionals and loop
