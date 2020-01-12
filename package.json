@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/fadeomar/outdoors/issues"
   },
-  "homepage": "https://github.com/fadeomar/outdoors#readme"
+  "homepage": "https://github.com/fadeomar/outdoors#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
 }
