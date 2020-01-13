@@ -273,4 +273,41 @@ we use sass to fix the problems that we have with CSS, CSS gets very messy, For 
   - Mixins : to write reusable pieces of CSS code ;
   - Functions : similar to mixins, with the different that they produce a value that can be used;
   - Extends : to make different selctors inherit declarations that are common to all of them ;
-  - Control directives : for writing complex code using conditionals and loop
+  - Control directives : for writing complex code using conditionals and loop;
+
+#### to run the sass in the project : 
+  1- install node-sass  ```npm i node-sass -D```;  
+  2- write a script to run sass compiler with with first with sass file then the distenation of css file that will produce from compiling so in script in package.json ```"compile:sass" : "node-sass sass/main.scss css/style.css"```;  
+  3- when write sass and we need to compile it just run the script ```npm run compile:sass```;   
+
+#### to write variable in sass : 
+  $name-of-variable : value-of-variable;  
+  and call it by $name-of-variable;  
+  ex: 
+  ```
+  $color-dark : #000;
+  background-color: #color-dark;
+  ```
+#### to write mixin: 
+for example when we use float, we need prefix code to get the height of element that we float so we can write this piece of code as a mixin and use it wherever we want  
+1- declar a mixin : (with name and block of declaration)  
+```
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+```  
+2- and we can call at many times like : 
+in the place that we want that piece of code in it :  
+```@include clearfix; ```;  
+3- we can pass parameter to mixin :  
+```
+@mixin style-color($col) {
+  background-color: $col;
+}
+```
+4- and again call it put this time with passing argument :   
+```@include style-color($color-dark)```;  
