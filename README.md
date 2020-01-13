@@ -311,3 +311,30 @@ in the place that we want that piece of code in it :
 ```
 4- and again call it put this time with passing argument :   
 ```@include style-color($color-dark)```;  
+
+----
+
+### architect our sass using 1-7 pattern :  
+where we create siven folders and one main sass file to imrot all the files that are in these folders ,  
+**note**: all partials start with underscore .   
+  * base folder :(put our basic project definitions ) it will includes :   
+    - _base.scss (includes resets and style for html and body elements selectors).  
+    - _animation.scss.   
+    - _typography.scss.   
+    - _utilities.scss.   
+  * abstracts folder (variabls, mixin and functions) :   
+    - _variables.scss.   
+    - _mixins.scss.   
+    - _functions.scss.   
+  * components folder (here create file for each component).   
+  * layout folder : (elements should work every were and on all pages).   
+  * pages folder : 
+    - _home.scss. 
+
+now we need to import all these files to main.scss file to work all of them togther 
+so in main file 
+**note** : when importing it's not neccessary to tell sass what is the extention or puting the underscore 
+```
+@import "abstracts/variables"  
+... "the same for all files "
+```
