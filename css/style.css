@@ -236,7 +236,7 @@ body {
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.6);
       z-index: 20; }
   .composition:hover .composition__photo:not(:hover) {
-    transform: scale(-95); }
+    transform: scale(0.95); }
 
 .section-about {
   background-color: #f7f7f7;
