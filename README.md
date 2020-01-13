@@ -338,3 +338,30 @@ so in main file
 @import "abstracts/variables"  
 ... "the same for all files "
 ```
+-----
+* if we want to make gradient text background color for h2 for example :   
+  1- in the stylesheet give it a background-image liner gradient with the colors.   
+  2- display inline block to make the background just for text not the all width.   
+  3- then use -webkit-background-clip to text;
+  4- to make the clip show we need to make the text color to transparent.   
+  5- using effect in hover state with malty effect so tranform : skewY(2) skewX(1) scale(1.1).  
+  6- to make the text in the center we need to srround the h2 with a div and give it a class and this will be in utilities because we will need it more then one and make the align-text to center;
+
+* makeimg a grid to disply the content in sections in parallel 
+  1- create a div with class "row" thats the parent   
+  2- and create two divs with the same class for the content   
+  3- for the parent we will give it a max-width and background-color and margin 0 auto;   
+  4- for the chidren apply prefix mixin for it 
+  5- using [class^="col-"]{float :left } that mean rvery class starts with "col-" 
+  6- and inside the class block using &:not(:last-child){margin-rgith:$gutter-horizintal} that mean all the class except the last one 
+  ```
+    [class^="col-"] {
+    // background-color: orange;
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+  ```
+  
