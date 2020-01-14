@@ -256,6 +256,35 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.05); }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem; }
+  .card__side {
+    background-color: orangered;
+    font-size: 2rem;
+    color: #fff;
+    height: 50rem;
+    transition: all 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card__side__front {
+      background-color: #fff; }
+    .card__side__back {
+      transform: rotateY(180deg); }
+      .card__side__back__1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7030); }
+  .card:hover .card__side__front {
+    transform: rotateY(180deg); }
+  .card:hover .card__side__back {
+    transform: rotateY(0deg); }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
@@ -269,3 +298,8 @@ body {
   transform: skewY(-7deg); }
   .section-features > * {
     transform: skewY(7deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 50rem 0;
+  margin-top: -11rem; }
