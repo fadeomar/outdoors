@@ -273,4 +273,95 @@ we use sass to fix the problems that we have with CSS, CSS gets very messy, For 
   - Mixins : to write reusable pieces of CSS code ;
   - Functions : similar to mixins, with the different that they produce a value that can be used;
   - Extends : to make different selctors inherit declarations that are common to all of them ;
-  - Control directives : for writing complex code using conditionals and loop
+  - Control directives : for writing complex code using conditionals and loop;
+
+#### to run the sass in the project : 
+  1- install node-sass  ```npm i node-sass -D```;  
+  2- write a script to run sass compiler with with first with sass file then the distenation of css file that will produce from compiling so in script in package.json ```"compile:sass" : "node-sass sass/main.scss css/style.css"```;  
+  3- when write sass and we need to compile it just run the script ```npm run compile:sass```;   
+
+#### to write variable in sass : 
+  $name-of-variable : value-of-variable;  
+  and call it by $name-of-variable;  
+  ex: 
+  ```
+  $color-dark : #000;
+  background-color: #color-dark;
+  ```
+#### to write mixin: 
+for example when we use float, we need prefix code to get the height of element that we float so we can write this piece of code as a mixin and use it wherever we want  
+1- declar a mixin : (with name and block of declaration)  
+```
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+```  
+2- and we can call at many times like : 
+in the place that we want that piece of code in it :  
+```@include clearfix; ```;  
+3- we can pass parameter to mixin :  
+```
+@mixin style-color($col) {
+  background-color: $col;
+}
+```
+4- and again call it put this time with passing argument :   
+```@include style-color($color-dark)```;  
+
+----
+
+### architect our sass using 1-7 pattern :  
+where we create siven folders and one main sass file to imrot all the files that are in these folders ,  
+**note**: all partials start with underscore .   
+  * base folder :(put our basic project definitions ) it will includes :   
+    - _base.scss (includes resets and style for html and body elements selectors).  
+    - _animation.scss.   
+    - _typography.scss.   
+    - _utilities.scss.   
+  * abstracts folder (variabls, mixin and functions) :   
+    - _variables.scss.   
+    - _mixins.scss.   
+    - _functions.scss.   
+  * components folder (here create file for each component).   
+  * layout folder : (elements should work every were and on all pages).   
+  * pages folder : 
+    - _home.scss. 
+
+now we need to import all these files to main.scss file to work all of them togther 
+so in main file 
+**note** : when importing it's not neccessary to tell sass what is the extention or puting the underscore 
+```
+@import "abstracts/variables"  
+... "the same for all files "
+```
+-----
+* if we want to make gradient text background color for h2 for example :   
+  1- in the stylesheet give it a background-image liner gradient with the colors.   
+  2- display inline block to make the background just for text not the all width.   
+  3- then use -webkit-background-clip to text;
+  4- to make the clip show we need to make the text color to transparent.   
+  5- using effect in hover state with malty effect so tranform : skewY(2) skewX(1) scale(1.1).  
+  6- to make the text in the center we need to srround the h2 with a div and give it a class and this will be in utilities because we will need it more then one and make the align-text to center;
+
+* makeimg a grid to disply the content in sections in parallel 
+  1- create a div with class "row" thats the parent   
+  2- and create two divs with the same class for the content   
+  3- for the parent we will give it a max-width and background-color and margin 0 auto;   
+  4- for the chidren apply prefix mixin for it 
+  5- using [class^="col-"]{float :left } that mean rvery class starts with "col-" 
+  6- and inside the class block using &:not(:last-child){margin-rgith:$gutter-horizintal} that mean all the class except the last one 
+  ```
+    [class^="col-"] {
+    // background-color: orange;
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+  ```
+  

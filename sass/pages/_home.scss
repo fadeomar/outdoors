@@ -3,3 +3,13 @@
   padding: 25rem 0;
   margin-top: -30vh;
 }
+
+.section-features {
+  margin-top: -11rem;
+  padding: 20rem 0;
+  @include liner-img('../img/nat-4.jpg');
+  transform: skewY(-7deg);
+  & > * {
+    transform: skewY(7deg);
+  }
+}
