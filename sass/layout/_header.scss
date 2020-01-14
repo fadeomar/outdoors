@@ -3,6 +3,7 @@
   height: 95vh;
   @include liner-img('../img/background.jpg');
   background-position: bottom;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
 
   &__logo-box {

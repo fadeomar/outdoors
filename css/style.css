@@ -273,7 +273,8 @@ body {
     width: 100%;
     backface-visibility: hidden;
     border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    overflow: hidden; }
     .card__side__front {
       background-color: #fff; }
     .card__side__back {
@@ -284,6 +285,13 @@ body {
     transform: rotateY(-180deg); }
   .card:hover .card__side__back {
     transform: rotateY(0deg); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: color;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__picture__1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7030), url("../img/nat-5.jpg"); }
 
 .section-about {
   background-color: #f7f7f7;
