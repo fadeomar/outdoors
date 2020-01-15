@@ -364,4 +364,22 @@ so in main file
     }
   }
   ```
+  -----
   
+  ## tours sections (the mean points) :-
+    * ### How to create an amazing rotating card.   
+    * ### How to use ```prespective``` in CSS.   
+    * ### How to use the ```backface-visibility``` proprty.   
+    * ### Using background blend mode .    
+    * ### How and when to use ```box-decoration-beack```.  
+
+----
+  
+## stories sections (the mean points) :-
+  * ### How to make text flow around the shabes with ```shape-outsdie``` and ```float```.   
+  * ### How to apply ```filter``` to images.   
+  * ### How to create backgtound video covering an entire section.   
+  * ### Using ```<video>``` HTML element   .    
+  * ### How and when to use ```object-fit``` property.  
+
+----
