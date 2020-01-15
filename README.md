@@ -365,3 +365,9 @@ so in main file
   }
   ```
   
+  ## tours sections (the mean points) :-
+    * ### How to create an amazing rotating card.   
+    * ### How to use ```prespective``` in CSS.   
+    * ### How to use the ```backface-visibility``` proprty.   
+    * ### Using background blend mode .    
+    * ### How and when to use ```box-decoration-beack```.  
