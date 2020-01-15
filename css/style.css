@@ -282,6 +282,10 @@ body {
       transform: rotateY(180deg); }
       .card__side__back__1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7030); }
+      .card__side__back__2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card__side__back__3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side__front {
     transform: rotateY(-180deg); }
   .card:hover .card__side__back {
@@ -294,6 +298,10 @@ body {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
     .card__picture__1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7030), url("../img/nat-5.jpg"); }
+    .card__picture__2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../img/nat-6.jpg"); }
+    .card__picture__3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../img/nat-6.jpg"); }
   .card__heading {
     color: red;
     font-size: 2.8rem;
@@ -311,6 +319,10 @@ body {
     box-decoration-break: clone; }
     .card__heading__span__1 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 112, 48, 0.8)); }
+    .card__heading__span__2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
+    .card__heading__span__3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)); }
   .card__details {
     padding: 3rem; }
     .card__details ul {
@@ -324,6 +336,22 @@ body {
         color: black; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; }
+  .card__price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: #fff; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 .section-about {
   background-color: #f7f7f7;
