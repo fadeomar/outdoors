@@ -261,12 +261,12 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 50rem; }
+  height: 52rem; }
   .card__side {
     background-color: orangered;
     font-size: 2rem;
     color: #fff;
-    height: 50rem;
+    height: 52rem;
     transition: all 0.5s;
     position: absolute;
     top: 0;
@@ -311,6 +311,19 @@ body {
     box-decoration-break: clone; }
     .card__heading__span__1 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 112, 48, 0.8)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        color: black; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
 
 .section-about {
   background-color: #f7f7f7;

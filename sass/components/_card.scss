@@ -2,14 +2,14 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 50rem;
+  height: 52rem;
 
 
   &__side {
     background-color: orangered;
     font-size: 2rem;
     color: $color-white;
-    height: 50rem;
+    height: 52rem;
     transition: all 0.5s;
     position: absolute;
     top: 0;
@@ -79,6 +79,24 @@
         to right bottom,
         rgba($color-secondary-light, 0.8),
         rgba($color-secondary-dark, 0.8))
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; 
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        color:black; 
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-gray-light-2; 
+        }
+      }
     }
   }
 }
