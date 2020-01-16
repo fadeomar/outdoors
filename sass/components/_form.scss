@@ -37,4 +37,9 @@
     margin-top: .7rem;
     display: block;
   }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

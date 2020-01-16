@@ -445,7 +445,7 @@ body {
   .form__input::-webkit-input-placeholder {
     color: #999; }
 
-.form__lable {
+.form__label {
   font-size: 1.2rem;
   font-weight: 700;
   margin-left: 2rem;
