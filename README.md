@@ -383,3 +383,15 @@ so in main file
   * ### How and when to use ```object-fit``` property.  
 
 ----
+----
+  
+## Booking sections (the mean points) :-
+  * ### How to implement "solid-color gradients".   
+  * ### How the general and adjacent sibling selectors work and why we need them.      
+  * ### How to use the ```::iput-placeholder``` pseudo-element.      
+  * ### Using ```<video>``` HTML element   .    
+  * ### How and when to use ```:focus, :invalid,placeholder-shown``` and ```:checked``` pseudo classes.   
+  * ### Techniques to custom radio button.     
+
+----
+
