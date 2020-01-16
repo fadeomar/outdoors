@@ -383,7 +383,6 @@ so in main file
   * ### How and when to use ```object-fit``` property.  
 
 ----
-----
   
 ## Booking sections (the mean points) :-
   * ### How to implement "solid-color gradients".   
