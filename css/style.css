@@ -212,7 +212,8 @@ body {
   position: fixed;
   top: 6rem;
   right: 6rem;
-  border-radius: 50%; }
+  border-radius: 50%;
+  z-index: 1111; }
 
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
