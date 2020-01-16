@@ -239,6 +239,7 @@ body {
   margin: 1rem; }
 
 .navigation__link:link, .navigation__link:visited {
+  display: inline-block;
   font-size: 3rem;
   font-weight: 300;
   color: #fff;
@@ -251,7 +252,8 @@ body {
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  color: #55c57a; }
+  color: #55c57a;
+  transform: translateX(1rem); }
 
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
