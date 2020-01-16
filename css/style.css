@@ -235,6 +235,16 @@ body {
   list-style: none;
   text-align: center; }
 
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__link {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase; }
+
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
