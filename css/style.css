@@ -195,6 +195,15 @@ body {
     float: left;
     width: 80%; }
 
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#7ed56f, #28b485); }
+
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
