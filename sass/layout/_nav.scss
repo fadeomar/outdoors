@@ -17,7 +17,14 @@
   }
 
   &__button {
-
+    background-color: $color-white;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 1111;
   }
 
   &__nav {
