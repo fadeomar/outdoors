@@ -176,8 +176,10 @@ body {
   .footer__link:link, .footer__link:visited {
     text-decoration: none;
     color: #999;
+    background-color: #333;
     text-transform: uppercase;
-    display: inline-block; }
+    display: inline-block;
+    transition: all 0.3s; }
   .footer__link:hover, .footer__link:active {
     color: #55c57a;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);

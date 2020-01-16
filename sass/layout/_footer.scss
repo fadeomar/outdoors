@@ -33,8 +33,10 @@
     &:visited {
       text-decoration: none;
       color: $color-grey-dark-2;
+      background-color: $color-grey-dark-3;
       text-transform: uppercase;
       display: inline-block;
+      transition: all 0.3s;
     }
 
     &:hover,
