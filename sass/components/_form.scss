@@ -65,7 +65,7 @@
     border-radius: 50%;
     display: inline-block;
     left: 0;
-    top: 0;
+    top: -.4rem;
     position: absolute;
 
     &::after {
@@ -79,6 +79,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: $color-primary;
+      opacity: 0;
     }
   }
 }
