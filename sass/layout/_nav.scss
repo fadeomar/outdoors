@@ -81,4 +81,14 @@
     }
   }
 
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+    
+  }
+
+  &__checkbox:checked ~ &__background {
+    opacity: 1;
+    width: 100%;
+  }
+
 }
