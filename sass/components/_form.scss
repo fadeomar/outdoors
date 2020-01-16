@@ -55,6 +55,7 @@
     font-size: $default-font-size;
     cursor: pointer;
     position: relative;
+    padding-right: 4.5rem;
   }
 
   &__radio-button {
@@ -67,6 +68,8 @@
       border: 5px solid $color-primary;
       border-radius: 50%;
       display: inline-block;
+      left: 0;
+      top: 0;
     }
   }
 }
