@@ -167,6 +167,10 @@ body {
   .footer__logo {
     width: 15rem;
     height: auto; }
+  .footer__navigation {
+    border-top: 1px solid #777;
+    padding: 2rem;
+    display: inline-block; }
   .footer__list {
     list-style: none; }
   .footer__item {
