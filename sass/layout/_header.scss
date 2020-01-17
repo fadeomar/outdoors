@@ -13,9 +13,9 @@
   }
 
   &__logo {
-    height: 8rem;
+    height: 5rem;
     &:hover {
-      animation: moveToLeft 1.3s ease-in;
+      transform: scale(1.05);
     
     }
   }
