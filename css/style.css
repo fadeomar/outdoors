@@ -121,9 +121,9 @@ body {
     top: 3rem;
     left: 3rem; }
   .header__logo {
-    height: 8rem; }
+    height: 5rem; }
     .header__logo:hover {
-      animation: moveToLeft 1.3s ease-in; }
+      transform: scale(1.05); }
   .header__text-box {
     position: absolute;
     top: 40%;
