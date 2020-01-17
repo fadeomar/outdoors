@@ -394,8 +394,6 @@ so in main file
 
 ----
 
-----
-  
 ## Booking sections (the mean points) :-
   * ### How to implement "checkbox hack" and how its works.   
   * ### How the create custom animation timing functions using cubic bezier curves;     
@@ -403,4 +401,12 @@ so in main file
   * ### Using ```transform-origin``` .    
   * ### create an amazingly creative effect !.        
 
+----
+
+## Pop up section (the mean points) :-
+  * ### How to build a nice popup with only CSS.      
+  * ### How use ```:target``` pseudo class.        
+  * ### How to create boxes with equal height using ```display: table-cell```.         
+  * ### How to create CSS text columns.       
+  * ### How to automatically hyphenate words using ```hyphens```.    
 ----
