@@ -394,3 +394,13 @@ so in main file
 
 ----
 
+----
+  
+## Booking sections (the mean points) :-
+  * ### How to implement "checkbox hack" and how its works.   
+  * ### How the create custom animation timing functions using cubic bezier curves;     
+  * ### How to animate "solid-color gradients".      
+  * ### Using ```transform-origin``` .    
+  * ### create an amazingly creative effect !.        
+
+----
