@@ -13,7 +13,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 75%;
-    height: 50rem;
     background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba($color-black,0.2);
     border-radius: 3px;
@@ -29,6 +28,7 @@
     width:66.666667%;
     display: table-cell;
     vertical-align: middle;
+    overflow: hidden;
   }
 
   &__img {

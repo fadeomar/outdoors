@@ -667,7 +667,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 75%;
-    height: 50rem;
     background-color: #fff;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 3px;
@@ -678,7 +677,8 @@ body {
   .popup__right {
     width: 66.666667%;
     display: table-cell;
-    vertical-align: middle; }
+    vertical-align: middle;
+    overflow: hidden; }
   .popup__img {
     display: block;
     width: 100%; }
